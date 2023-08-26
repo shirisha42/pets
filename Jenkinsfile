@@ -12,7 +12,7 @@ pipeline{
                 checkout scm
 
                 //run maven wrapper commands
-                sh "./mvn clean compile"
+                sh "./mvnw clean compile"
 
                 echo 'Building the project with maven compile'
             }
@@ -23,7 +23,7 @@ pipeline{
 
                 //run maven wrapper commands
 
-                sh "./mvn clean test"
+                sh "./mvnw clean test"
 
                 echo 'Testing the project with maven test'
 
@@ -35,7 +35,7 @@ pipeline{
 
                 //run maven wrapper commands
 
-                sh "./mvn clean package"
+                sh "./mvnw clean package"
 
                 echo 'packaging the project with maven package'
 
