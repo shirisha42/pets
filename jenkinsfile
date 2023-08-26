@@ -1,10 +1,15 @@
 pipeline{
     agent any
+    tools{
+        // specify the git installation
+        git 'MyGitInstallation'
+        
+    }
     stages{
         stage('Build') {
             steps{
                 //get code from github repository
-                git 
+                checkout scmgit
 
                 //run maven wrapper commands
                 sh "./mvn clean compile"
