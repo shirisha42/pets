@@ -9,7 +9,7 @@ pipeline{
         stage('Build') {
             steps{
                 //get code from github repository
-                checkout scmgit
+                checkout scm
 
                 //run maven wrapper commands
                 sh "./mvn clean compile"
